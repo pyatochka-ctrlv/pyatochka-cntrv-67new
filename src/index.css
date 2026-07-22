@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --ink: #08090a;
+    --graphite: #131417;
+    --charcoal: #1b1c20;
+    --hair: rgba(245, 245, 240, 0.12);
+    --hair-strong: rgba(245, 245, 240, 0.26);
+    --paper: #f5f4ef;
+    --paper-dim: #c7c6bf;
+    --mute: #89897f;
+    --lime: #d4ff3d;
+    --lime-dim: #a8c92f;
+    --amber: #e9b872;
+    --amber-deep: #c8863f;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #08090a;
+    color: #f5f4ef;
+  }
+
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background-color: #08090a;
+    color: #f5f4ef;
+  }
+}
+
+.font-unbounded {
+  font-family: 'Unbounded', sans-serif;
+}
+
+.font-mono-custom {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Utilities */
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #89897f;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: #d4ff3d;
+  display: inline-block;
+}
+
+.eyebrow.amber::before {
+  background: #e9b872;
+}
+
+.display-title {
+  font-family: 'Unbounded', sans-serif;
+  text-transform: uppercase;
+  line-height: 0.94;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+}
+
+/* Keyframe for scroll line */
+@keyframes scrollline {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.animate-scroll-line {
+  animation: scrollline 2.2s cubic-bezier(0.16, 0.84, 0.32, 1) infinite;
+}
+
