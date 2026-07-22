@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/six-seven-Yacht-Charter-Mykonos/',
+    base: '/67new/',,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
