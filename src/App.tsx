@@ -12,6 +12,7 @@ import { VillaSection } from './components/VillaSection';
 import { ExperienceIncluded } from './components/ExperienceIncluded';
 import { Packages } from './components/Packages';
 import { Testimonials } from './components/Testimonials';
+import { Footer } from './components/Footer';
 
 const WHATSAPP_NUMBER = '17866306996';
 
@@ -42,6 +43,7 @@ export default function App() {
       <ExperienceIncluded />
       <Packages onSelectPackage={handleSelectPackage} />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
